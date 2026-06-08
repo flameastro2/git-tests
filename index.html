@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações no CSS</title>
+
+    <style>
+        @keyframes walk {
+            from {
+                left: -150px
+            } to {
+                left: 50%
+            }
+        }
+
+        div {
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            animation: walk 5s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
