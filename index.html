@@ -3,27 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animações no CSS</title>
+    <title>Animações na prática</title>
 
     <style>
-        @keyframes walk {
+        @keyframes slide-in {
             from {
-                left: -150px
+                left: -500px
             } to {
-                left: 50%
+                left: 500px;
+                position: static;
             }
         }
 
-        div {
-            background-color: red;
-            width: 150px;
-            height: 150px;
-            position: relative;
-            animation: walk 5s forwards;
+        * {
+            margin: 0;
+            padding: 0;
         }
+
+        body {
+            background-color: #f3f3f3;
+            height: 100%;
+        }
+
+        body, main, section, ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            margin: 10px auto;
+            position: relative;
+            animation: slide-in 3s forwards;
+            width: clamp(320px, 50vw, 800px);
+            background-color: rgb(230, 230, 230);
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(128, 128, 128, 0.323);
+        }
+
+        section, h2, h1 {
+            margin: 10px;
+        }
+
+        img {
+            border-radius: 17px;
+        }
+
+        p {
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
-    <div></div>
+    <main>
+        <h1>Olá, meu nome é <span>Lorem Ipsum</span>!</h1>
+
+        <img src="https://imagenes.elpais.com/resizer/v2/WQGOZS5S7D3DCLWMVVJM7S5VAQ.jpg?auth=d6a587caabc3fe9784b42f91cb3d8ebbd00fb04408d5ae49cf7ccf42dce579f3&width=1000" alt="Minha foto de perfil" height="500">
+
+        <section class="about">
+            <h2>Sobre mim</h2>
+            <p>Lorem, ipsum dolor sit amet <strong>consectetur adipisicing elit</strong>. Praesentium tempore nemo <em>voluptatem beatae</em> commodi alias, <a href="#">eos inventore error deleniti nisi</a> reiciendis accusamus consequuntur neque corrupti reprehenderit obcaecati <strong>ab harum voluptas</strong>.</p>
+        </section>
+
+        <section class="social-media">
+            <h2>Redes Sociais</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et harum reprehenderit tempore quis repudiandae praesentium laudantium dolor doloremque ex autem dignissimos hic maxime perferendis, nostrum ipsum. Incidunt ea ducimus officia?</p>
+
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
+
+        <section class="hobby">
+            <h2>O que eu mais gosto de fazer</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et harum reprehenderit tempore quis repudiandae praesentium laudantium dolor doloremque ex autem dignissimos hic maxime perferendis, nostrum ipsum. Incidunt ea ducimus officia?</p>
+            <ol>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ol>
+
+        </section>
+    </main>
 </body>
 </html>
