@@ -1,5 +1,3 @@
 # git-tests
 
-Alterando no GitHub
-
-Lidando com merges2
+A simple repo to test git
